@@ -1,10 +1,10 @@
 ## Introduction
 
-**Web scrapes public weather radio data and stores it in a JSON structure**
+**Webscrapes weather radio data and stores it in JSON**
 
-A backend data gathering tool for offline records of nationwide emergency weather radio station locations and frequencies. Without internet or phone access, this provides a third option for regional look-ups with raw JSONs of all weather stations in the US and territories. The purpose of the data gathering data is to create a structure that makes this public information easier to work with.
+A backend data gathering tool for offline records of emergency weather radio station locations and frequencies. Without internet or phone access, this provides an alternative for regional look-ups of weather stations in the USA and its territories. The data is gathered into an easier to parse JSON structure.
 
-The NOAA site gets scraped/crawled for a list of all NWR stations by county coverage and state location. The results are stored locally in JSON format for offline backup. Items gathered:
+The NOAA site is scraped for the list of all NWR stations by county coverage and their state. The results are stored locally in JSON format for offline backup. Items gathered:
 
 - List of weather radio stations by state
 - List of county coverage by state
@@ -14,9 +14,11 @@ The NOAA site gets scraped/crawled for a list of all NWR stations by county cove
 - Last updated date posted per the NOAA webmaster
 - 50 MB of http traffic for all national data gets stored as 2.8 MB of JSON, just under 6%
 
-### Application
+[Example archive - latest nwrdump download](https://github.com/jwhittaker/nwrdumps/archive/master.zip)
 
-It is useful to have offline backup copies of public data, especially data which pertains to lists of resources for communications--especially for emergencies. If internet is down during an emergency, a radio becomes a valuable tool. The script provides a data dump which will show one's local weather station and SAME code.
+### Utility
+
+It is useful to have offline backup copies of public data, especially for communications resources in times of emergencies. If the internet and cell service is out during an emergency, a radio becomes a valuable tool. This script gathers the latest data published to the NOAA website for all local weather stations and SAME codes. The website data can be printed out, but this tool was an exercise to prepare a backend for linking to future software.
 
 ### Future Applications
 
@@ -52,7 +54,7 @@ cd nwrsites
 cat states/AL.json | python -m json.tool | grep -i -C5 demo
 ```
 
-### Download archived results instead of a script
+### Archived Results Dump
 
 [Latest nwrdump download](https://github.com/jwhittaker/nwrdumps/archive/master.zip)
 
@@ -122,4 +124,3 @@ To program NWR SAME receivers with the proper county(s) and marine area(s) of ch
 - Online at the [United States and Territories Table](http://www.nws.noaa.gov/nwr/coverage/county_coverage.html)
 - This script, which parses and organizes the data from the NWR coverage website mentioned
 - By telephone at **1-888-NWR-SAME (1-888-697-7263)** for a voice menu
-
