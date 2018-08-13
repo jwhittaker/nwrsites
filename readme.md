@@ -124,3 +124,113 @@ To program NWR SAME receivers with the proper county(s) and marine area(s) of ch
 - Online at the [United States and Territories Table](http://www.nws.noaa.gov/nwr/coverage/county_coverage.html)
 - This script, which parses and organizes the data from the NWR coverage website mentioned
 - By telephone at **1-888-NWR-SAME (1-888-697-7263)** for a voice menu
+
+## Data Structure Examples
+
+### State counties & stations
+
+`states/AL.json`
+```json
+{
+    "map": [
+        "http://www.nws.noaa.gov/nwr/Maps/GIF/states/alabama.gif"
+    ], 
+    "counties": {
+        "count": 157, 
+        "updated": "August 10 2018 20:05:15 UTC", 
+        "list": [
+            {
+                "nwrtx": "Demopolis", 
+                "same": "001023", 
+                "county": "Choctaw", 
+                "frequency": "162.475", 
+                "callsign": "WXL72", 
+                "remarks": ""
+            }, 
+            {
+                "nwrtx": "Demopolis", 
+                "same": "001025", 
+                "county": "Clarke", 
+                "frequency": "162.475", 
+                "callsign": "WXL72", 
+                "remarks": ""
+            }
+        ]
+    }, 
+    "stations": {
+        "count": 21, 
+        "list": [
+            {
+                "gif": "http://www.nws.noaa.gov/nwr/Maps/GIF/WXL72.gif", 
+                "callsign": "WXL72", 
+                "frequency": "162.475", 
+                "power": "1000", 
+                "tx": "Jefferson", 
+                "url": "http://www.nws.noaa.gov/nwr/coverage/site2.php?State=AL&Site=WXL72", 
+                "pdf": "http://www.nws.noaa.gov/nwr/Maps/PDF/WXL72.pdf", 
+                "site": "Demopolis", 
+                "wfo": "Calera, AL"
+            }, 
+        ]
+    }
+}
+```
+
+### Marine
+
+`marine/atl.json`
+```json
+{
+    "count": 436, 
+    "code": "atl", 
+    "list": [
+        {
+            "power": "1000", 
+            "frequency": "162.400", 
+            "callsign": "KEC93", 
+            "description": "Synopsis for Eastport ME to Stonington (Deer Isle) ME out 25NM", 
+            "tx": "Ellsworth ME", 
+            "area": "", 
+            "remarks": "", 
+            "type": "*", 
+            "same": "073005", 
+            "zoneid": "ANZ005"
+        }, 
+    ], 
+    "name": "Atlantic"
+}
+```
+
+### Outages & Notices
+
+`outages/outages.json`
+```json
+{
+    "count": 9, 
+    "notices": [
+        [
+            "KWN62 Ord, NE transmitter Out of Service (Updated 6/4/18)", 
+            "(6/4/18) Transmitter is operating from a temporary antenna due to collapse of the radio tower at this site.  Restoration to normal service is expected in 6-8 months with the construction of a new tower."
+        ]
+    ], 
+    "updated": "08/10/2018 20:05:15 UTC", 
+    "list": [
+        {
+            "status": "OUT OF SERVICE", 
+            "wfo": "North Little Rock AR", 
+            "tx": "Morrilton", 
+            "state": "AR", 
+            "callsign": "KXI91", 
+            "frequency": "162.475"
+        }, 
+        {
+            "status": "DEGRADED", 
+            "wfo": "Hastings NE", 
+            "tx": "Ord", 
+            "state": "NE", 
+            "callsign": "KWN62", 
+            "frequency": "162.525"
+        }
+    ]
+}
+```
