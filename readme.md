@@ -52,6 +52,9 @@ cd nwrsites
 cat states/AL.json | python -m json.tool | grep -i -C5 demo
 ```
 
+### Download archived results instead of a script
+
+[Latest nwrdump download](https://github.com/jwhittaker/nwrdumps/archive/master.zip)
 
 ## About NWR
 
