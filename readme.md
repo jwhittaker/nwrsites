@@ -1,6 +1,6 @@
 ## Introduction
 
-**Webscrapes weather radio data and stores it in JSON**
+**Webscrapes weather radio station tuning data and stores it in JSON**
 
 A backend data gathering tool for offline records of emergency weather radio station locations and frequencies. Without internet or phone access, this provides an alternative for regional look-ups of weather stations in the USA and its territories. The data is gathered into an easier to parse JSON structure.
 
