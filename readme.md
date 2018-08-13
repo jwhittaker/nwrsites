@@ -1,5 +1,7 @@
 ## Introduction
 
+**Web scrapes public weather radio data and stores it in a JSON structure**
+
 A backend data gathering tool for offline records of nationwide emergency weather radio station locations and frequencies. Without internet or phone access, this provides a third option for regional look-ups with raw JSONs of all weather stations in the US and territories. The purpose of the data gathering data is to create a structure that makes this public information easier to work with.
 
 The NOAA site gets scraped/crawled for a list of all NWR stations by county coverage and state location. The results are stored locally in JSON format for offline backup. Items gathered:
@@ -26,6 +28,30 @@ The NOAA site provides a lot of useful resources, but the frontend itself is out
 - Develop frontends
 - Develop utilities for mapping
 - Develop utilities for radio programming
+
+## Lazy Start
+
+### Requirements
+- Python
+- Python library BeautifulSoup (`bs4`)
+- Python library Requests (`requests`)
+
+### Copy-Paste & Go
+
+```bash
+sudo apt install -y python-pip
+pip install bs4 requests
+git clone git@github.com:jwhittaker/nwrsites.git
+cd nwrsites
+./nwr.py
+```
+
+### Reading Results
+
+```bash
+cat states/AL.json | python -m json.tool | grep -i -C5 demo
+```
+
 
 ## About NWR
 
